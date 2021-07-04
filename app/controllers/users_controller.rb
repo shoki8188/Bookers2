@@ -30,8 +30,9 @@ before_action :ensure_correct_user,only: [:edit, :update]
   private
   # ストロングパラメータ
   def user_params
-     params.require(:user).permit(:image, :name, :introduction)
+     params.require(:user).permit(:profile_image, :name, :introduction)
   end
+  
  def ensure_correct_user
     @user = User.find(params[:id])
     if @user.id != current_user.id

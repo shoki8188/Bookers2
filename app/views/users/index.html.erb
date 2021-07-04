@@ -3,7 +3,7 @@
     <div class="col-md-3">
       <div>
         <h2>User info</h2>
-        <p><%= attachment_image_tag @user, :profile_image, :fill, 10, 10, fallback: "no_image.jpg" %></p>
+        <p><%= attachment_image_tag @user, :profile_image, :fill, 75, 75, fallback: "no_image.jpg" %></p>
         <p>name：<%= current_user.name %></p>
         <p>introduction：<%= current_user.introduction %></p>
       </div>
@@ -37,7 +37,7 @@
        <tbody>
           <% @users.each do |user| %>
         <tr>
-          <td> <%= attachment_image_tag @user, :profile_image, :fill, 10, 10, fallback: "no_image.jpg" %>
+          <td> <%= attachment_image_tag @user, :profile_image, :fill, 75, 75, fallback: "no_image.jpg" %>
           </td>
           <td><%= user.name %></td>
           <td> <%=link_to "Show", user_path(user) %></td>
